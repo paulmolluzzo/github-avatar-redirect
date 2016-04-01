@@ -70,7 +70,7 @@ router.use(function (req, res, next) {
 });
 
 router.route('/').get(function (req, res) {
-  res.send('Try going to: '+ req.get('host') +'/paulmolluzzo')
+  res.send('Try going to: ' + req.get('host') + '/paulmolluzzo');
 });
 
 router.route('/:username').get(function (req, res) {
