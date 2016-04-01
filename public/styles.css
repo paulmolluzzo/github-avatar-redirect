@@ -1,0 +1,42 @@
+html {
+  background-color:#fafafa;
+  font-size: 20px;
+}
+body {
+  line-height: 1.2rem;
+  margin: 0;
+  padding: 5%;
+  font: 1rem/1.5rem "Source Sans Pro", sans-serif;
+  color: #444;
+}
+a {
+  color: #0074D9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1, h2, h3, h4 { margin-bottom: .5rem;
+  font-weight: normal;
+line-height: 1;
+color: #222;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  margin:.75rem 0;
+}
+header p {
+  font-size: 1.2rem;
+}
+.container {
+  max-width: 30rem;margin: 0 auto;
+}
+footer {
+  margin: 10rem auto 0;
+  text-align: center;
+}

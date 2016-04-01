@@ -3,6 +3,11 @@ var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var https = require('https');
+app.engine('html', require('ejs').renderFile);
+
+// view engine
+app.set('view engine', 'html');
+app.use('/assets', express.static('public'));
 
 // connect to MongoDB
 mongoose.connect(process.env.MONGO_DB_URL);
@@ -15,7 +20,6 @@ app.use(bodyParser.json());
 var User = require('./users');
 
 // Creating User
-
 function createUserWithAvatar(res, username) {
   var options = {
     host: 'api.github.com',
@@ -70,7 +74,7 @@ router.use(function (req, res, next) {
 });
 
 router.route('/').get(function (req, res) {
-  res.send('Try going to: ' + req.get('host') + '/paulmolluzzo');
+  res.render('index', {homeURL: req.protocol + '://' + req.get('host')});
 });
 
 router.route('/:username').get(function (req, res) {
