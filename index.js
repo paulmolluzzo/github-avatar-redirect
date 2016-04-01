@@ -78,6 +78,10 @@ router.use(function (req, res, next) {
   next();
 });
 
+router.route('/').get(function (req, res) {
+  res.send('Try going to: '+ req.get('host') +'/paulmolluzzo')
+});
+
 router.route('/:username').get(function (req, res) {
   var requestedName = req.params.username;
 
