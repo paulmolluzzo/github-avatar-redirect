@@ -4,17 +4,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var https = require('https');
 
-// env vars and config
-var env = require('./env.json');
-exports.config = function () {
-  var nodeEnv = process.env.NODE_ENV || 'development';
-  return env[nodeEnv];
-};
-
-var config = exports.config();
-
 // connect to MongoDB
-mongoose.connect(config.MONGO_DB_URL || process.env.MONGO_DB_URL);
+mongoose.connect(process.env.MONGO_DB_URL);
 
 // Body parser
 app.use(bodyParser.urlencoded({extended: true}));
