@@ -2,6 +2,10 @@
   "name": "github-avatar-redirect",
   "version": "0.0.1",
   "description": "Redirects URLs directly to the GitHub user's avatar URL",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/paulmolluzzo/github-avatar-redirect.git"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node dist/bin/www",
