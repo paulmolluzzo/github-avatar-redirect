@@ -39,6 +39,7 @@
     "space": true
   },
   "engines": {
-    "node": "4.4.0"
+    "node": "4.4.0",
+    "npm": "3.8.0"
   }
 }
